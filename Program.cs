@@ -62,12 +62,12 @@ namespace Exercicio
 
                         case 3: //Update Employee Salary
                             Console.Clear();
-                            Console.WriteLine("Enter the employee Id that will have salary increase: ");
+                            Console.WriteLine("Enter the employee Id that will have _salary increase: ");
                             int upSalarayEmployee = int.Parse(Console.ReadLine());
                             Employee up = list.Find(x => x.Id == upSalarayEmployee);
                             if (up != null)
                             {
-                                Console.WriteLine("Enter percentage increase in salary: ");
+                                Console.WriteLine("Enter percentage increase in _salary: ");
                                 up.UpdateSalary(double.Parse(Console.ReadLine()));
                             }
                             else
