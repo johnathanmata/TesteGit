@@ -21,12 +21,22 @@ namespace Exercicio {
                                 Employee a = new Employee();
                                 Console.Write("Id: ");
                                 a.Id = int.Parse(Console.ReadLine());
-                                Console.Write("Name: ");
-                                a.Name = Console.ReadLine();
-                                Console.Write("Salary: ");
-                                a.Salary = double.Parse(Console.ReadLine());
-                                list.Add(a);
-                                Console.WriteLine();
+                                Employee test = list.Find(x => x.Id == a.Id);
+                                if (test == null)
+                                {
+                                    Console.Write("Name: ");
+                                    a.Name = Console.ReadLine();
+                                    Console.Write("Salary: ");
+                                    a.Salary = double.Parse(Console.ReadLine());
+                                    list.Add(a);
+                                    Console.WriteLine();
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Employee already registered!");
+                                    Console.WriteLine(test);
+                                    Console.ReadLine();
+                                }
                             }
                             break;
 
